@@ -289,10 +289,6 @@
 						<figure>
 							<img class="card-img card-imgsv" src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/ConsultaPublica.png" alt="Card image cap" style="width: 800px; height: 400px;">
 						</figure>
-
-						<div class="card-img-overlaysv">
-							<h5 class="card-title text-center text-white">Consulta Pública</h5>
-						</div>
 					</a>
 				</div>
 
@@ -301,10 +297,6 @@
 						<figure>
 							<img class="card-img card-imgsv" src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/Notificaciones.png" alt="Card image cap" style="width: 800px; height: 400px;">
 						</figure>
-
-						<div class="card-img-overlaysv">
-							<h5 class="card-title text-center text-white">Notificaciones</h5>
-						</div>
 					</a>
 				</div>
 			</div>
