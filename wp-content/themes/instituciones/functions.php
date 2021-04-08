@@ -264,7 +264,7 @@ function createShortcuts() {
 			<div class="shortcut-item ">
 				<a href="<?php echo get_site_url(); ?>/codex-alimentarius/"> <!-- Introducir link del icono-->
 					<figure class="figure">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/Logo_Codex.png" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="codex" data-appear-anim-style="fadeInUp" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/Logo_Codex.png" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" width="100px" alt="codex" data-appear-anim-style="fadeInUp" />
 					 	<figcaption><h5 class="text-center">Codex Alimentarius</h5></figcaption>
 					</figure>
 				</a>

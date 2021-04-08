@@ -155,7 +155,12 @@ $preguntas = myprefix_get_theme_option('preguntas');
 							?>
 							<div class="col-xs col-sm col-md col-lg mt-3 mb-3">			
 								<a href="<?php the_permalink();?>" class="a-btn text-lg-center ltc-black servicios-link" id="<?php echo $id_link;?>">
-								<img src="<?php echo $img_grupo_thumbnail;?>" data-src="<?php echo $img_grupo_thumbnail;?>" class="img-fluid img-116-style mx-auto d-block lazyload" alt="servicio5p" id="icon<?php echo $i;?>" />
+									<? if ( strpos($img_grupo_thumbnail, 'Logo_Codex') !== false ) { 
+										echo $img_grupo_thumbnail; ?>
+								 <? } else { ?>
+										<img src="<?php echo $img_grupo_thumbnail;?>" data-src="<?php echo $img_grupo_thumbnail;?>" class="img-fluid img-116-style mx-auto d-block lazyload" alt="servicio5p" id="icon<?php echo $i;?>" />
+								 <? } ?>
+
 								</a>
 								<h4 class="text-center h4-bloc-11-style mx-auto d-block text-lg-center mg-sm tc-black text-md-center text-sm-center" id="titulo-icon-<?php echo $i;?>">
 									&nbsp;<!--<?php echo $nombre_grupo;?>--> 
