@@ -94,7 +94,7 @@
 
 				<div class="col-xs-12 col-sm my-auto">
 					<div class="shortcut-item ">
-						<a href="<?php echo get_site_url(); ?>/inventario-rtca">
+						<a href="<?php echo get_site_url(); ?>/servicios/inventario-rtca-por-rubro/">
 							<!-- Introducir link del icono-->
 							<figure class="figure">
 								<img src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/Trabajo.svg" data-src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/Trabajo.svg" alt="consulta" data-appear-anim-style="fadeInUp" class="img-fluid mx-auto d-block pulse-hvr animated lazyloaded" style="visibility: visible;">
@@ -108,7 +108,7 @@
 
 				<div class="col-xs-12 col-sm my-auto">
 					<div class="shortcut-item ">
-						<a href="<?php echo get_site_url(); ?>/inventario-nso">
+						<a href="<?php echo get_site_url(); ?>/servicios/inventario-nso-por-rubro/">
 							<!-- Introducir link del icono-->
 							<figure class="figure">
 								<img src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/Trabajo.svg" data-src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/Trabajo.svg" alt="consulta" data-appear-anim-style="fadeInUp" class="img-fluid mx-auto d-block pulse-hvr animated lazyloaded" style="visibility: visible;">
@@ -124,7 +124,7 @@
 
 				<div class="col-xs-12 col-sm my-auto">
 					<div class="shortcut-item ">
-						<a href="<?php echo get_site_url(); ?>/inventario-rts">
+						<a href="<?php echo get_site_url(); ?>/servicios/inventario-rts-por-rubro/">
 							<!-- Introducir link del icono-->
 							<figure class="figure">
 								<img src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/Trabajo.svg" data-src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/Trabajo.svg" alt="consulta" data-appear-anim-style="fadeInUp" class="img-fluid mx-auto d-block pulse-hvr animated lazyloaded" style="visibility: visible;">
@@ -285,7 +285,7 @@
 		<div class="container-fluidsv">
 			<div class="card-group vertical-gobsvpostinfo-style">
 				<div class="card text-white post-thumbnail">
-					<a href="<?php echo get_site_url(); ?>/consulta-publica/">
+					<a href="<?php echo get_site_url(); ?>/2021/04/12/consulta-publica">
 						<figure>
 							<img class="card-img card-imgsv" src="<?php echo get_site_url(); ?>/wp-content/themes/instituciones/img/ConsultaPublica.png" alt="Card image cap" style="width: 800px; height: 400px;">
 						</figure>
