@@ -5,7 +5,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
 	<?php 
 		$logo_institucion_msj="";
 		wp_head(); 
@@ -14,20 +14,37 @@
 			$logo_institucion_msj="Colocar link del logo en los datos de la institución!..";
 		}
 		$portal_transparencia = myprefix_get_theme_option( 'input_portal' );
+		$portal_instituciones = myprefix_get_theme_option( 'input_instituciones' );
+		if($portal_instituciones==""){$portal_instituciones="#";}
 		$buscador = myprefix_get_theme_option( 'input_buscador' );
 		$titulo_sitio_web = myprefix_get_theme_option( 'input_example' );
+		$titulo_longitud = myprefix_get_theme_option( 'input_title_len' );
+		$google_medicion_id = myprefix_get_theme_option( 'input_google_medicion_id' );
 
-	?>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1230687-45"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-1230687-45');
-	</script>
-
+		if($google_medicion_id<>""){
+			?>
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $google_medicion_id;?>"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+		
+			  gtag('config', '<?php echo $google_medicion_id;?>');
+			</script>
+			<?php
+			}
+			?>
+		<!--
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1230687-45"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+		
+			  gtag('config', 'UA-1230687-45');
+			</script>
+		-->
 	<style>
 	.navbar-default {
 	background-color: #3c4457;
@@ -97,6 +114,9 @@
     
 </head>
 <body>
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
 <header>
 	<!-- Main container -->
 	<div class="page-container">
@@ -107,7 +127,7 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="instituciones">
-						<a href="<?php echo get_site_url(); ?>/otras-instituciones/" class="follow-icon-item" target="_blank">
+					<a href="<?php echo $portal_instituciones;?>" class="follow-icon-item" target="_blank">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 211.32 37.319">
 						  <g id="Instituciones_ON" transform="translate(-65.68 -41.718)">
 							<text id="Instituciones" transform="translate(126 73)" fill="#fff" font-size="20" font-family="MuseoSans-500, Museo Sans" font-weight="500"><tspan x="0" y="0">INSTITUCIONES</tspan></text>
@@ -122,14 +142,14 @@
 					</div>
 					<div class="transparencia">
 						
-						<a href="<?php echo $portal_transparencia; ?>" class="follow-icon-item" target="_blank">
+					<a href="<?php echo $portal_transparencia;?>" class="follow-icon-item" target="_blank">
 						<!--<svg id="Capa_2" width="22" height="22" fill="#FEFFFF" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><path d="M505.749,475.587l-145.6-145.6c28.203-34.837,45.184-79.104,45.184-127.317c0-111.744-90.923-202.667-202.667-202.667 S0,90.925,0,202.669s90.923,202.667,202.667,202.667c48.213,0,92.48-16.981,127.317-45.184l145.6,145.6 c4.16,4.16,9.621,6.251,15.083,6.251s10.923-2.091,15.083-6.251C514.091,497.411,514.091,483.928,505.749,475.587z M202.667,362.669c-88.235,0-160-71.765-160-160s71.765-160,160-160s160,71.765,160,160S290.901,362.669,202.667,362.669z"/></g>
 						</svg>
 						
 						<p style="padding-top:15px;padding-left: 5px; display: inline-block;font-family: 'MuseoSans-500';font-size: 11px;line-height : 12px;color: #FEFFFF!important;">
 						Portal de<BR/><span style="font-family: 'MuseoSans-700';font-size: 13px;">
 						Transparencia</p>-->
-						<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 197 42">
+						<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 215 42">
 						  <g id="Transparencia_ON" transform="translate(-63 -108)">
 							<g id="Elipse_1" data-name="Elipse 1" transform="translate(63 108)" fill="none" stroke="#fff" stroke-width="4">
 							  <circle cx="15" cy="15" r="15" stroke="none"/>

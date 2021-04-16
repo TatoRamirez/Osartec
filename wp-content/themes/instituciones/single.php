@@ -1,7 +1,7 @@
 <?php get_header();?>
 
 <?php while ( have_posts() ): the_post();?>
-<div class="bloc full-width-bloc bgc-charcoal d-flex l-bloc" id="bloc-15">
+<div class="bloc full-width-bloc bgc-white d-flex l-bloc" id="bloc-15">
 	<div class="container none">
 		<div class="row no-gutters">
 			<div class="col-12">
@@ -58,56 +58,27 @@
 						</div>
 					</div>
 					<?php
-					/*<a class="carousel-nav-controls carousel-control-prev object-hidden" href="#carousel-49426" role="button" data-slide="prev">
-					<span class="fa fa-chevron-left"></span><span class="sr-only">Previous</span></a>
-					<a class="carousel-nav-controls carousel-control-next object-hidden" href="#carousel-49426" role="button" data-slide="next">
-					<span class="fa fa-chevron-right"></span><span class="sr-only">Next</span></a>
-					*/
+					
 					?>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<!--
-<div class="bloc bgc-charcoal d-bloc" id="bloc-16">
-	<div class="container none">
-		<div class="row">
-			<div class="col-12">
-				<h4 class="<?php echo $class;?>" id="tab-text" >
-					<?php
-					/** Titulo  */
-					if($class=="tab-mg-md"){
-						the_title();
-					}
-					?>
-				</h4>
-			</div>
-		</div>
-	</div>
-</div>
--->
+
 
 <div class="bloc bgc-white-2 tc-black" id="bloc-17">
 	<div class="container none bloc-sm margen-single">
 		<div class="row">
 			<div class="col">
 			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-			  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-			}
+			
+			if(function_exists('get_hansel_and_gretel_breadcrumbs')): 
+				  echo get_hansel_and_gretel_breadcrumbs();
+			endif;
+			
 			?>
-			<?php
-			/*if($class=="tab-none"){
-				?>	
-			<div class="tab-margin">				
-				
-			</div>
-			<br>
-			<?php
-			}*/
-			/**Contenido */
-			?>
+			
              
 			<h1 class="title-noti">
             <?php
@@ -126,6 +97,64 @@
 			Publicado el <?php the_time('d-m-Y'); ?>.
 			<p class="text-center"><?php the_tags(); ?></p>
 			</div>
+		</div>
+		<div class="row">
+<?php
+/*$cat = get_the_category($post->ID);
+echo "Categoria: ". $cat [0]->cat_name ;*/
+$bool_next_prev=true;
+if ( get_post_type( get_the_ID() ) == 'servicios' || get_post_type( get_the_ID() ) == 'programas') {
+    //if is true
+	$bool_next_prev=false;
+}
+?>
+
+<div class="col-sm">
+<?php
+
+previous_post_link('&laquo;&laquo; %link', '%title', $bool_next_prev);
+
+//previous_post('&laquo; &laquo; %', 'Anterior: ', 'yes'); 
+?>
+</div>
+
+<div class="col-sm text-center">
+<?php
+$the_cat = get_the_category();
+
+$category_name = $the_cat[0]->cat_name;
+
+$category_link = get_category_link( $the_cat[0]->cat_ID );
+
+if ( get_post_type( get_the_ID() ) == 'servicios' ) {
+	$category_name="Servicios";
+	$category_link=get_site_url()."/guia-de-servicios/";
+}else if(get_post_type( get_the_ID() ) == 'programas'){
+	$category_name="Programas";
+	$category_link=get_site_url()."/guia-de-programas/";
+}	
+
+?>
+ 
+
+<a href="<?php echo $category_link ?>" title="Regresar a la categor&iacute;a <?php echo $category_name ?>" class="btn btn-d-noticia float-center">Ir a <?php echo $category_name ?></a>
+
+</div>
+
+<div class="col-sm text-right">
+
+<?php 
+next_post_link('%link &raquo;&raquo;', '%title', $bool_next_prev);
+//next_post('% &raquo; &raquo; ', 'Siguiente: ', 'yes'); 
+?>
+
+
+</div> <!-- end navigation -->
+
+
+
+
+
 		</div>
 	</div>
 </div>

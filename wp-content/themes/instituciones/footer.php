@@ -381,11 +381,65 @@ table.dataTable.display tbody tr:hover.selected{background-color:transparent}
     width: 100%;
 }
 
+.card figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+	filter: brightness(60%);
+	
+}
+#breadcrumbs a {
+    color: #c6ccd5;
+}
+
+.breadcrumb_last {
+    color: #b1c9ff;
+    font-family: "MuseoSans-500";
+}
+a {
+    color: #b1c9ff;
+    text-decoration: none;
+    background-color: transparent;
+    font-family: "MuseoSans-300";
+}
+a:hover {
+    color: #FFF;
+    text-decoration: none;
+    background-color: transparent;
+    font-family: "MuseoSans-300";
+}
+h1, .h1 {
+    font-size: 2.5rem;
+    font-family: "MuseoSans-300";
+    font-weight: normal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    letter-spacing: 0.1em;
+}
+.w3eden .btn, .w3eden .navbar .navbar-nav > a.btn {
+    border-width: 2px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 0.6071em;
+    line-height: 1.35em;
+    border: none;
+    border-radius: 0.1875rem;
+    width: 100%;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+#wpdmmydls-447c81072a66316a7a46e8691cf41503 th {
+    background-color: rgba(0,0,0,0.04);
+    border-bottom: 1px solid #4e5669;
+    text-align: center;
+    vertical-align: middle;
+}
 </style>
 
 <!-- bloc-5 nueva plantilla BEGIN-->
 <div class="container-fluid footer-bk bloc none bgc-footer d-bloc footer-bloc pt-5 pb-5" id="bloc-5"><!-- pt-5 pb-5-->
-	<div class="row justify-content-around align-items-stretch footer-row ml-4 mr-4 mx-auto">
+	<div class="row justify-content-around align-items-stretch footer-row ml-4 mr-4 mx-auto bloc">
 		<div class="col-sm d-flex flex-column justify-content-between order-sm-3 order-md-3 order-lg-3 mb-4 mb-sm-0 mb-md-0 mb-lg-0 mb-xl-0">						
 			 <div class="row mb-2">
 				<div class="col-sm">
@@ -397,19 +451,19 @@ table.dataTable.display tbody tr:hover.selected{background-color:transparent}
 						<div class="social-link-bric text-center" id="follow-icons">
 							<?php if($facebook_url !=''){?>
 								<a href="<?php echo $facebook_url;?>" class="facebook-link" target="_blank">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/img/Facebook.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-follow-icon-style float-lg-none pad-icons-head animated fadeInUp pulse-hvr"  />
+									<img src="<?php bloginfo('stylesheet_directory'); ?>/img/facebook.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-follow-icon-style float-lg-none pad-icons-head animated fadeInUp pulse-hvr"  />
 								</a>
 							<?php } if($ig_url !=''){?>
 								<a href="<?php echo $ig_url;?>" class="instagram-link" target="_blank">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/img/Instagram.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-follow-icon-style float-lg-none pad-icons-head animated fadeInUp pulse-hvr"  />
+									<img src="<?php bloginfo('stylesheet_directory'); ?>/img/instagram.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-follow-icon-style float-lg-none pad-icons-head animated fadeInUp pulse-hvr"  />
 								</a>
 							<?php } if($twitter_url !=''){?>
 								<a href="<?php echo $twitter_url;?>" class="twitter-link" target="_blank">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/img/Twitter.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-follow-icon-style float-lg-none pad-icons-head animated fadeInUp pulse-hvr"  />
+									<img src="<?php bloginfo('stylesheet_directory'); ?>/img/twitter.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-follow-icon-style float-lg-none pad-icons-head animated fadeInUp pulse-hvr"  />
 								</a>
 							<?php } if($yt_url !=''){?>
 								<a href="<?php echo $yt_url;?>" class="youtube-link" target="_blank">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/img/Youtube.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-follow-icon-style float-lg-none pad-icons-head animated fadeInUp pulse-hvr"  />
+									<img src="<?php bloginfo('stylesheet_directory'); ?>/img/youtube.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-follow-icon-style float-lg-none pad-icons-head animated fadeInUp pulse-hvr"  />
 								</a>
 							<?php }?>
 						</div>
@@ -444,7 +498,7 @@ table.dataTable.display tbody tr:hover.selected{background-color:transparent}
 		<div class="col-sm d-flex flex-column justify-content-between mb-4 mb-sm-0 mb-md-0 mb-lg-0 mb-xl-0">
 			<div class="row">
 				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 text-center mb-2 my-sm-auto my-md-auto my-lg-auto my-xl-auto text-center d-sm-none d-md-none d-lg-block">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/Ubicacion.svg" alt="" class="img-fluid img-ubicacion-style float-lg-none"  />
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/ubicacion.svg" alt="" class="img-fluid img-ubicacion-style float-lg-none"  />
 				</div>
 				<div class="col-xs-12 col-sm-11 col-md-10 col-lg-10  col-title-institucion">
 					<h6 class="footer-text text-center text-sm-left text-md-left text-lg-left text-xl-left" id="title-institucion">
@@ -456,7 +510,7 @@ table.dataTable.display tbody tr:hover.selected{background-color:transparent}
 			</div>	
 			<div class="row align-items-center">
 				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 text-center mt-2  mb-2 my-sm-auto my-md-auto my-lg-auto my-xl-auto text-center d-sm-none d-md-none d-lg-block">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/Telefono.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-telefono-style float-lg-none pad-icons-head animated fadeInUp"  />
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/telefono.svg" data-appear-anim-style="fadeInUp" alt="" class="img-fluid img-telefono-style float-lg-none pad-icons-head animated fadeInUp"  />
 				</div>
 				<div class="col-xs-12 col-sm-11 col-md-10 col-lg-10  col-telefono-institucion">
 					<h6 class="text-center text-lg-left text-sm-left mg-md h6.footer-text" id="tel-institucion">
@@ -466,7 +520,7 @@ table.dataTable.display tbody tr:hover.selected{background-color:transparent}
 			</div>
 			<div class="row align-items-center">
 				<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 text-center mt-2 mb-2 my-sm-auto my-md-auto my-lg-auto my-xl-auto text-center d-sm-none d-md-none d-lg-block">
-					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/Correo.svg" data-appear-anim-style="fadeInUp" class="img-fluid img-correo-style float-lg-none pad-icons-head animated fadeInUp" alt="" />
+					<img src="<?php bloginfo('stylesheet_directory'); ?>/img/correo.svg" data-appear-anim-style="fadeInUp" class="img-fluid img-correo-style float-lg-none pad-icons-head animated fadeInUp" alt="" />
 				</div>
 				<div class="col-xs-12 col-sm-11 col-md-10 col-lg-10  col-email-institucion">
 					<h6 class="mg-md text-center text-lg-left text-sm-left text-md-left h6.footer-text" id="mail-institucion">
@@ -497,7 +551,7 @@ table.dataTable.display tbody tr:hover.selected{background-color:transparent}
 
 <script>
     function getResolution() {
-        alert("Your screen resolution is: " + screen.width + "x" + screen.height);
+        //alert("Your screen resolution is: " + screen.width + "x" + screen.height);
     }
     </script>
      
@@ -523,7 +577,7 @@ $(".menu-item").hover(function() {
   	dropdown_menu.addClass("open");	
   	var parent_id = dropdown.closest("ul").attr("id");
   	if(parent_id != "menu-principal"){
-		dropdown_menu.attr("style","top: 0px; left: 200px;");
+		dropdown_menu.attr("style","top: 0px; left: 235px;");
   	}
 });
 
@@ -543,9 +597,7 @@ $(".menu-item").mouseleave(function() {
 </script>
 <!-- Additional JS END -->
 
-<!-- Preloader -->
-<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
-<!-- Preloader END -->
+
 
 </body>
 </html>

@@ -1,7 +1,7 @@
-/* Theme Name: Instituciones del Gobierno de El Salvador
+/* Theme Name: Gobierno de El Salvador
 Author: Secretaría de Innovación de la Presidencia de la República
-Description: Tema de referencia estandar para instituciones 
-Version: 1.0.0 
+Description: Tema de referencia estándar para instituciones 
+Version: 2.0.0 (202102)
 License: GNU General Public License v2 or later 
 License URI: http://www.gnu.org/licenses/gpl-2.0.html 
 Text Domain: Instituciones */
@@ -1068,12 +1068,12 @@ p.titleh1gobsv {
 }
 .img-telefono-style{
 	/*width:23px;*/
-	height:23px;
+	height:25px;
 	/*margin-top: 8% !important;*/
 }
 .img-correo-style{
 	/*width:23px;*/
-	height:18px;
+	height:25px;
 	/*margin-top: 11% !important;*/
 }
 

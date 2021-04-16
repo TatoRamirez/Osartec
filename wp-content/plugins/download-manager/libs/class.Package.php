@@ -886,10 +886,25 @@ class Package {
         if(!is_array($access)) $access = array();
         $style = wpdm_download_button_style(($template_type === 'page'), $ID);
         $style = isset($btnclass) && $btnclass !== '' ? $btnclass : $style;
+		$link_2_doc="wp-content/uploads/download-manager-files";
 
-        if ($download_url != '#')
-            $download_link = $download_link_extended = $download_link_popup = (int)get_option('__wpdm_mask_dlink', 1) === 1 ? "<a class='wpdm-download-link  download-on-click {$style}' rel='nofollow' href='#' data-downloadurl=\"{$download_url}\">{$link_label}</a>" : "<a class='wpdm-download-link {$style}' rel='nofollow' href='{$download_url}'>{$link_label}</a>";
-        //$download_link = $download_link_extended = $download_link_popup = (int)get_option('__wpdm_mask_dlink', 1) === 1 ? "<a class='wpdm-download-link {$style}' rel='nofollow' href='#' onclick=\"location.href='{$download_url}';return false;\">{$link_label}</a>" : "<a class='wpdm-download-link {$style}' rel='nofollow' href='{$download_url}'>{$link_label}</a>";
+		$ext_es_pdf="";
+		$preview_button="";
+		$file_types_pdf = \WPDM\Package::fileTypes($ID, false);
+        if(count($file_types_pdf)){
+            if(count($file_types_pdf) == 1) {
+                $tmpavarpdf = $file_types_pdf;
+                $ext_es_pdf = $tmpvar = array_shift($tmpavarpdf);
+				
+            }
+        }
+		if($ext_es_pdf=="pdf"){
+			$preview_button="<button type='button' class='btn btn-primary' data-toggle='modal' data-target='.dlid_{$ID}'>Vista Previa</button>&nbsp;";
+		}
+
+        if ($download_url != '#') 
+            $download_link = $download_link_extended = $download_link_popup = (int)get_option('__wpdm_mask_dlink', 1) === 1 ? "$preview_button<a class='wpdm-download-link  download-on-click {$style}' rel='nofollow' href='#' data-downloadurl=\"{$download_url}\">{$link_label}</a>" : "<a class='wpdm-download-link {$style}' rel='nofollow' href='{$download_url}'>{$link_label}</a>";        
+		//$download_link = $download_link_extended = $download_link_popup = (int)get_option('__wpdm_mask_dlink', 1) === 1 ? "<a class='wpdm-download-link {$style}' rel='nofollow' href='#' onclick=\"location.href='{$download_url}';return false;\">{$link_label}</a>" : "<a class='wpdm-download-link {$style}' rel='nofollow' href='{$download_url}'>{$link_label}</a>";
         else
             $download_link = "<div class='alert alert-warning {$alert_size}' data-title='" . __( "DOWNLOAD ERROR:" , "download-manager" ) . "'>{$link_label}</div>";
 

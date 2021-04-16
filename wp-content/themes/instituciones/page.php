@@ -6,7 +6,7 @@
 /** Imagen descatada */
 if( has_post_thumbnail()){
 ?>
-<div class="bloc full-width-bloc bgc-charcoal d-flex l-bloc" id="bloc-15">
+<div class="bloc full-width-bloc bgc-white d-flex l-bloc" id="bloc-15">
 	<div class="container none">
 		<div class="row no-gutters">
 			<div class="col-12">
@@ -50,9 +50,9 @@ if( has_post_thumbnail()){
 		<div class="row">
 			<div class="col">				
 			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-			  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-			}
+			if(function_exists('get_hansel_and_gretel_breadcrumbs')): 
+				  echo get_hansel_and_gretel_breadcrumbs();
+			endif;
 			?>
 			<h1 class="text-center"><?php the_title();?></h1>
 			<?php			

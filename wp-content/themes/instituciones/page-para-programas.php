@@ -159,7 +159,7 @@ $preguntas = myprefix_get_theme_option('preguntas');
 							endwhile;	
 					}
 			?>
-			<div class="row mt-2"></div>
+			<div class="row mt-2"><a name="<?php echo $slug_grupo;?>"></a></div>
 				<div class="row-fluid">
         			<div class="row mb-2">
             			<div class="col">

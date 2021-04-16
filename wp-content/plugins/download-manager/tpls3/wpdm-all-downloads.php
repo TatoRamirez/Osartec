@@ -23,7 +23,7 @@ $coltemplate['page_link'] = "<a class=\"package-title\" href=\"%s\">%s</a>";
     <style>
         #wpdmmydls-<?php echo $tid; ?>{
             border-bottom: 1px solid #dddddd;
-            border-top: 1px solid #bbb;
+            border-top: 3px solid #bbb;
             font-size: 10pt;
             min-width: 100%;
         }
@@ -38,8 +38,7 @@ $coltemplate['page_link'] = "<a class=\"package-title\" href=\"%s\">%s</a>";
             margin: 0 !important;
         }
         #wpdmmydls-<?php echo $tid; ?> th{
-            background-color: #2f3644;
-            color: white;
+            background-color: #e8e8e8;
             border-bottom: 0;
         }
 
@@ -69,8 +68,8 @@ $coltemplate['page_link'] = "<a class=\"package-title\" href=\"%s\">%s</a>";
             font-size: 9pt;
         }
         .dataTables_wrapper .dataTables_paginate .paginate_button{
-            margin: 1 !important;
-            padding: 1 !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
         @media (max-width: 799px) {
@@ -298,13 +297,40 @@ $coltemplate['page_link'] = "<a class=\"package-title\" href=\"%s\">%s</a>";
 
                             }}
                             if($colx == 0) echo '<div class="hidden-md hidden-lg td-mobile"></div>';
+							
+							
+							$download_files = get_package_data(10, 'individual_file_download'); 
+							
                                         ?>
 
 
                         </td>
                         <?php }  ?>
 
-                    </tr>
+                    </tr> 
+					
+					<?php
+					$pos = strpos($ffile, "http:");
+					if ($pos === false) {
+						$pleca = strpos($ffile,"/");
+						if($pleca === false){
+							
+							$ffile=get_site_url()."/wp-content/uploads/download-manager-files/".$ffile;
+						}else{
+							$ffile=get_site_url()."/".$ffile;
+						}
+					
+					}
+					?>
+					<div class='modal fade dlid_<?php echo get_the_ID();?>' tabindex='-1' role='dialog' aria-labelledby='myLargeModalLabel' aria-hidden='true'>
+						<div class='modal-dialog modal-lg'>
+							<div class='modal-content'>
+							<iframe src='<?php echo get_site_url()."/wp-content/plugins/download-manager/viewer/viewer.php?dl=".$ffile;?>' width='100%' height='600' style='border: none;'></iframe>
+							</div>
+						</div>
+					</div>
+					
+
                 <?php } endwhile; ?>
             <?php if((!isset($params['jstable']) || $params['jstable']==0) && $total_files==0): ?>
                 <tr>
