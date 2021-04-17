@@ -250,9 +250,9 @@ $category_link = get_category_link( $category_id );
 			$leyenda = $thumbnail_details[0]->post_excerpt;
 			$titulo=get_the_title();//echo $titulo;
 			
-			if(strlen($titulo)>$titulo_longitud){
+			/*if(strlen($titulo)>$titulo_longitud){
 				$titulo=substr($titulo,0,$titulo_longitud)."...";
-			} 
+			} */
 			
 
 			?>
@@ -282,14 +282,14 @@ $category_link = get_category_link( $category_id );
 					<img class="card-img card-imgsv" src="<?php echo $image[0]; ?>" alt="Card image cap">
 				</figure>
 				
-				<div class="card-img-overlaysv">
-				  <h5 class="card-title text-center text-white"><?php 
-				  
-				  echo $titulo;
-				  ?>
+				<!--<div class="card-img-overlaysv">
+				  <h5 class="card-title text-center text-white">
+				  	<?php
+				  		echo $titulo;
+				  	?>
 				  </h5>
-				  <!--<p class="card-text"></p>-->
-				</div>
+				  <p class="card-text"></p>
+				</div>-->
 				<!--<div class="card-footer">
 				  <small class="text-muted"></small>
 				</div>-->
@@ -368,9 +368,9 @@ $category_link = get_category_link( $category_id );
 			$leyenda = $thumbnail_details[0]->post_excerpt;
 			$titulo=get_the_title();//echo $titulo;
 			
-			if(strlen($titulo)>$titulo_longitud){
+			/*if(strlen($titulo)>$titulo_longitud){
 				$titulo=substr($titulo,0,$titulo_longitud)."...";
-			} 
+			} */
 			
 
 			?>
@@ -401,10 +401,10 @@ $category_link = get_category_link( $category_id );
 				</figure>
 				
 				<div class="card-img-overlaysv">
-				  <h5 class="card-title text-center text-white"><?php 
-				  
-				  echo $titulo;
-				  ?>
+				  <h5 class="card-title text-center text-white">
+				  	<?php 
+				  	echo $titulo;
+				  	?>
 				  </h5>
 				  <!--<p class="card-text"></p>-->
 				</div>
