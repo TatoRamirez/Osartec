@@ -247,7 +247,7 @@ function createShortcuts() {
 			<div class="shortcut-item">
 				<a href="<?php echo $calendario;?>" >
 					<figure class="figure">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/calendario.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="icono%20calendario" data-appear-anim-style="fadeInUp" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/Calendario.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="calendario" data-appear-anim-style="fadeInUp" />
 					   <figcaption><h5 class="text-center">Calendario de Actividades</h5></figcaption>
 					</figure>
 				</a>
@@ -274,7 +274,7 @@ function createShortcuts() {
 			<div class="shortcut-item ">
 				<a href="<?php echo get_site_url(); ?>/preguntas-frecuentes/"> <!-- Introducir link del icono-->
 					<figure class="figure">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/preguntas.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="preguntas" data-appear-anim-style="fadeInUp" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/Preguntas.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="preguntas" data-appear-anim-style="fadeInUp" />
 					 	<figcaption><h5 class="text-center">Preguntas Frecuentes</h5></figcaption>
 					</figure>
 				</a>
@@ -285,7 +285,7 @@ function createShortcuts() {
 			<div class="shortcut-item ">
 				<a href="<?php echo get_site_url(); ?>/planes/"> <!-- Introducir link del icono-->
 					<figure class="figure">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/noticias.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="planes" data-appear-anim-style="fadeInUp" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/Noticias.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="planes" data-appear-anim-style="fadeInUp" />
 					 	<figcaption><h5 class="text-center">Planes</h5></figcaption>
 					</figure>
 				</a>
@@ -328,7 +328,7 @@ function createShortcuts() {
 			<div class="shortcut-item ">
 				<a href="<?php echo $programas;?>">
 					<figure class="figure">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/programa.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="programas" data-appear-anim-style="fadeInUp" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/Programa.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="programas" data-appear-anim-style="fadeInUp" />
 						<figcaption><h5 class="text-center">Programas</h5></figcaption>
 					</figure>
 				</a>
@@ -344,7 +344,7 @@ function createShortcuts() {
 			<div class="shortcut-item ">
 				<a href="<?php echo $videos;?>" >
 					<figure class="figure">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/videos.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="icono%20videos" data-appear-anim-style="fadeInUp" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/Videos.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="icono%20videos" data-appear-anim-style="fadeInUp" />
 						<figcaption><h5 class="text-center">Vídeos</h5></figcaption>
 					</figure>
 				</a>
@@ -360,7 +360,7 @@ function createShortcuts() {
 			<div class="shortcut-item ">
 				<a href="<?php echo $avisos;?>">
 					<figure class="figure">
-						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/avisos.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="avisos" data-appear-anim-style="fadeInUp" />
+						<img src="<?php bloginfo('stylesheet_directory'); ?>/img/lazyload-ph.png" data-src="<?php bloginfo('stylesheet_directory'); ?>/img/Avisos.svg" class="img-fluid mx-auto d-block animated pulse-hvr fadeInUp lazyload" alt="avisos" data-appear-anim-style="fadeInUp" />
 						<figcaption><h5 class="text-center">Avisos</h5></figcaption>
 					</figure>
 				</a>
